@@ -4,6 +4,9 @@ nixPkgs = ["dotnet-sdk_7"]
 [phases.build]
 cmds = ["dotnet publish -c Release -o publish"]
 
+[phases.postbuild]
+cmds = ["env"] # Esto imprimirá TODAS las variables detectadas en el log de build
+
 [start]
 # Forzamos las variables aquí si no las quieres poner en el panel de control
 cmd = "ASPNETCORE_URLS=http://0.0.0.0:${PORT:-5148} dotnet publish/programacion-proyecto-backend.dll"
