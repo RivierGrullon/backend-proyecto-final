@@ -89,6 +89,20 @@ programacion-proyecto-backend/
 - **Microsoft.EntityFrameworkCore.Tools** - Herramientas CLI para migraciones
 - **Swashbuckle.AspNetCore** - Generación de documentación Swagger/OpenAPI
 
+## Despliegue con Nixpacks
+
+Este proyecto está configurado para usar **Nixpacks** para despliegue automático.
+
+### Configuración
+
+El archivo `nixpacks.toml` contiene la configuración necesaria. Ver `NIXPACKS.md` para más detalles.
+
+### Variables de Entorno Requeridas
+
+- `DATABASE_CONNECTION_STRING` - Cadena de conexión a PostgreSQL
+- `JWT_KEY` - Clave secreta para JWT (mínimo 32 caracteres)
+- `PORT` - Puerto (configurado automáticamente por la plataforma)
+
 ## Próximos Pasos
 
 1. Crear tus modelos en la carpeta `Models/`
