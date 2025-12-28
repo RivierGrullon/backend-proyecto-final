@@ -12,4 +12,8 @@ export default defineConfig({
       },
     }),
   ],
+  preview: {
+    host: true,
+    allowedHosts: ["okwc0k44w848ossggk40k0c4.softver.cc"],
+  },
 });
